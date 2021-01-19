@@ -6,18 +6,23 @@ import (
     "strconv"
 )
 
+var instructions = "First argument should be a number and second memo for the memoized algorithm bad for the non memoized and bot for bottom-up"
+
 func main() {
     arg, err := strconv.Atoi(os.Args[1])
     if len(os.Args) != 3 || err != nil {
-        fmt.Println("First argument should be a number and second good for the memoized algorithm false for the non memoized and bot for bottom-up")
+        fmt.Println(instructions)
         os.Exit(1)
     }
-    if os.Args[2] == "good" {
-        fmt.Println(goodFibonacci(arg))
+    if os.Args[2] == "memo" {
+        fmt.Println("Memoized version:", goodFibonacci(arg))
     } else if os.Args[2] == "bot" {
-        fmt.Println(bottomUpFibonacci(arg))
+        fmt.Println("Bottom-up version:", bottomUpFibonacci(arg))
+    } else if os.Args[2] == "bad" {
+        fmt.Println("Bad version:", badFibonacci(arg))
     } else {
-        fmt.Println(badFibonacci(arg))
+        fmt.Println(instructions)
+        os.Exit(1)
     }
 }
 
