@@ -13,3 +13,7 @@ Will print the nth Fibonacci number. To run it `go run fibonacci.go $n $algorith
 + `bot` to run the bottom-up version
 + `memo` to run the memoized version
 + `bad` to run a slow recurrent one
+
+## peak finder
+
+There is a 1d and 2d versions. Cannot be run from the command line. They find a peak.
